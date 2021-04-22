@@ -22,7 +22,7 @@ class Dashboard(LoginRequiredMixin, TemplateView):
             return HttpResponseRedirect(
                 reverse(
                     'dashboard:dashboard-child',
-                    args={Child.objects.first().slug}
+                    args={Child.objects.first().pk}
                 )
             )
         return super(Dashboard, self).get(request, *args, **kwargs)
