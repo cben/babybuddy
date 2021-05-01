@@ -17,7 +17,7 @@ class Command(BaseCommand):
 
     def __init__(self, *args, **kwargs):
         super(Command, self).__init__(*args, **kwargs)
-        self.faker = Factory.create()
+        self.faker = Factory.create(locale='ru_RU')
         self.child = None
         self.weight = None
         self.time = None
